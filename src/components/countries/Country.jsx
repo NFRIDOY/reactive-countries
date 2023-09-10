@@ -8,10 +8,11 @@ export default function Country(props) {
     console.log(props?.country?.name?.nativeName?.eng?.official);
     return (
         <>
-            <div >
-                Country Name: {countryName}
-                <br />
-                Official Name: {countryOfficialName ? countryOfficialName : countryName}
+            <div className="countryBox" style={{"border": "2px solid red"}}>
+                <h1>Country Name: {countryName}</h1>
+                <h2>Official Name: {countryOfficialName ? countryOfficialName : countryName}</h2>
+
+
             </div>
         </>
     )
