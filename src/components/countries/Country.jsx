@@ -9,9 +9,12 @@ export default function Country(props) {
     return (
         <>
             <div className="countryBox" style={{"border": "2px solid red"}}>
-                <h1>Country Name: {countryName}</h1>
-                <h2>Official Name: {countryOfficialName ? countryOfficialName : countryName}</h2>
-
+                <h1>Country: {countryName}</h1>
+                {
+                countryOfficialName && (
+                <h2>Official Name: {countryOfficialName ? countryOfficialName : ""}</h2>
+                )
+                }
 
             </div>
         </>
