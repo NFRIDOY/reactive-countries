@@ -1,5 +1,7 @@
 // import React from 'react'
+
 import { useEffect, useState } from 'react'
+import Country from './Country';
 export default function Countries() {
     const [countries, setCountries] = useState([])
     const [count, setCount] = useState(0)
@@ -14,12 +16,21 @@ export default function Countries() {
         console.log(countries);
         
     }, [])
-    // }, [count])
+    // }, [count]) 
 
     const showCountry = () => {
         setCount(count+1)
     }
     return (
-        <div onClick={showCountry}>Countries: {countries.length} </div>
+        <>
+            <div onClick={showCountry}>Countries: {countries.length} </div>
+            <div>
+                {
+                    // Country
+                    countries.map((country => <Country country={country}></Country>))
+                }
+            </div>
+        </>
+        
     )
 }
